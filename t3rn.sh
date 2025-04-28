@@ -81,9 +81,9 @@ install_executor() {
 
     # Step 4: Create configuration file
     print_step "4" "Membuat file konfigurasi..."
-    # Create environment file with RPC endpoints (updated for SeiEVM and Monad using Alchemy where possible)
+    # Create environment file with RPC endpoints (Blast removed, SeiEVM and Monad included)
     sudo bash -c "cat > $ENV_FILE" <<EOL
-RPC_ENDPOINTS="{\"l2rn\": [\"https://b2n.rpc.caldera.xyz/http\"], \"arbt\": [\"https://arb-sepolia.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY\"], \"bast\": [\"https://base-sepolia.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY\"], \"opst\": [\"https://opt-sepolia.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY\"], \"unit\": [\"https://unichain-sepolia.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY\"], \"blst\": [\"https://sepolia.blast.io\"], \"seievm\": [\"https://sei-evm-sepolia.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY\"], \"monad\": [\"https://monad-testnet.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY\"]}"
+RPC_ENDPOINTS="{\"l2rn\": [\"https://b2n.rpc.caldera.xyz/http\"], \"arbt\": [\"https://arb-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"bast\": [\"https://base-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"opst\": [\"https://opt-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"unit\": [\"https://unichain-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"seievm\": [\"https://sei-evm-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"monad\": [\"https://monad-testnet.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"]}"
 EOL
 
     # Step 5: Set proper permissions
