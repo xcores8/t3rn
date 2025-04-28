@@ -83,7 +83,7 @@ install_executor() {
     print_step "4" "Membuat file konfigurasi..."
     # Create environment file with RPC endpoints (Blast removed, SeiEVM and Monad included)
     sudo bash -c "cat > $ENV_FILE" <<EOL
-RPC_ENDPOINTS="{\"l2rn\": [\"https://b2n.rpc.caldera.xyz/http\"], \"arbt\": [\"https://arb-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"bast\": [\"https://base-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"opst\": [\"https://opt-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"unit\": [\"https://unichain-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"seievm\": [\"https://sei-evm-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"monad\": [\"https://monad-testnet.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"]}"
+RPC_ENDPOINTS="{\"l2rn\": [\"https://b2n.rpc.caldera.xyz/http\"], \"arbt\": [\"https://arb-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"bast\": [\"https://base-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"opst\": [\"https://opt-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"unit\": [\"https://unichain-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"seievm\": [\"https://sei-evm-sepolia.g.alchemy.com/v2/ehkKs4aFrH-EwxMpt--DIPm77oMvFh_6\"], \"mont\": [\"https://monad-testnet-rpc.example.com\"]}"
 EOL
 
     # Step 5: Set proper permissions
@@ -112,7 +112,7 @@ Environment=EXECUTOR_PROCESS_ORDERS_ENABLED=true
 Environment=EXECUTOR_PROCESS_CLAIMS_ENABLED=true
 Environment=EXECUTOR_MAX_L3_GAS_PRICE=100
 Environment=PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
-Environment=ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn,seievm,monad
+Environment=ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn,seievm,mont
 EnvironmentFile=$ENV_FILE
 Environment=EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=true
 
